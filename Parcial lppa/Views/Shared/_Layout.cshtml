@@ -1,0 +1,41 @@
+﻿@{
+	var menu = ViewBag.menu;
+}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewBag.Title - UAI</title>
+	<link href="~/Content/site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div id="container">
+		<!-- Cabecera -->
+		<header>
+			¿ Hay vida enotros planetas? - Sistemas solares
+		</header>
+		<!-- Contenido -->
+		<section>
+			<article>
+				<div class="container">
+					@RenderBody()
+				</div>
+			</article>
+		</section>
+
+		<!-- Contenido relacionado-->
+		<aside id="sidemenu">
+			<ul>
+				<li><a href="/home/cosmo">Contenido relacionado</a> </li>
+			</ul>
+		</aside>
+		<!-- Pie de pagina -->
+		<footer>
+			<p>¿Hay vida en otros planetas?</p>
+		</footer>
+	</div>
+	<script src="~/Scripts/jquery-2.2.4.min.js"></script>
+	@RenderSection("scripts", required: false)
+</body>
+</html>
